@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+ <h1 th:text="'Hello ' + ${name}"></h1>
+<div>
+   <h2 th:if="${isAdmin}">You are an admin</h2>
+   <h2 th:unless="${isAdmin}">You are an user</h2>
+</div>
+</body>
+</html>

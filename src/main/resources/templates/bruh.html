@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="login-wrapper">
+    <div class="login-box">
+        <h2>Welcome Back 👋</h2>
+        <p>Login to your account</p>
+        <form th:action="@{/login}" method="POST">
+            <div class="input-group">
+                <input type="text" id="username" name="username" required>
+                <label for="username">Username</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <div class="extra">
+                <a href="#  ">Forgot password?</a>
+            </div>
+            <p><input type='checkbox' name='remember-me'/> Remember me on this computer.</p>
+        </form>
+    </div>
+</div>
+</body>
+</html>
