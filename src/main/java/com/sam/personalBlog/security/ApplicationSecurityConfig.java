@@ -31,6 +31,8 @@ public class ApplicationSecurityConfig {
 
                     .authorizeHttpRequests(yeah -> yeah
                             .requestMatchers("/css/**").permitAll()
+                            .requestMatchers("/welcome","/login").permitAll()
+                            .requestMatchers("/test/**").permitAll()
                             .requestMatchers(HttpMethod.GET,"/blogs/**").hasAuthority(BLOGS_READ.getPermission())
                             .requestMatchers(HttpMethod.POST,"/blogs/**").hasAuthority(BLOGS_WRITE.getPermission())
                             .requestMatchers(HttpMethod.DELETE,"/blogs/**").hasAuthority(BLOGS_DELETE.getPermission())

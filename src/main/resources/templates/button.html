@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Button</title>
+</head>
+<body>
+<form th:action="@{/buttonClicked}" method="post">
+    <button type="submit">Click this button</button>
+</form>
+
+<h1 th:if="${clicked}">You clicked the button</h1>
+</body>
+</html>
+
